@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    /* GRID */
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 105px 300px 532px 250px 350px 350px 350px 170px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "menu"
+            "logo"
+            "baner"
+            "tekst"
+            "paraimg"
+            "divyhv"
+            "sektekst"
+            "newsletter"
+            "kolarz"
+            "stopka";
+    }
+
+    .menu {
+        grid-area: menu;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .baner {
+        grid-area: baner;
+    }
+
+    .tekst {
+        grid-area: tekst;
+        text-align: center;
+    }
+    .paraimg {
+        grid-area: paraimg;
+    }
+    .divyhv {
+        grid-area: divyhv;
+    }
+    .sektekst {
+        grid-area: sektekst;
+    }
+    .newsletter {
+        grid-area: newsletter;
+    }
+    .kolarz {
+        grid-area: kolarz;
+    }
+
+    .container1 {
+  display: grid; 
+  grid-template-columns: 20% 20% 20%; 
+  grid-template-rows: 1fr; 
+  gap: 0px 60px; 
+  grid-template-areas: 
+    "div1 div2 div3"; 
+    height: 100%;
+    justify-content: center;
+        align-items: center;
+}
+.div1 { grid-area: div1; 
+    display: flex;
+    background-image: url("https://www.powiat-chrzanowski.pl/files/starostwo/44661687_1633549013417830_4249247579587477504_n2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    transition-duration: 1s ;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff0000;
+}
+.div1 h4{
+align-self: flex-end;
+text-shadow: 1px 1px 2px #000000;
+
+}
+.div2 { grid-area: div2; 
+    display: flex;
+    background-image: url("https://monki.pl/files/image/Powiat/wladze/STAROSTA-MONIECKI-Blazej-Bunkowski.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    transition-duration: 1s ;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff0000;
+}
+.div2 h4{
+align-self: flex-end;
+text-shadow: 1px 1px 2px #000000;
+
+}
+
+.div3 { grid-area: div3; 
+    display: flex;
+    background-image: url("https://static.goldenline.pl/user_photo/039/user_21799_6b7b38_huge.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    transition-duration: 1s ;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff0000;
+}
+.div3 h4{
+align-self: flex-end;
+text-shadow: 1px 1px 2px #000000;
+
+}
+.div1:hover {
+   
+    transform: scale(1.1);
+}
+.div2:hover {
+    
+    transform: scale(1.1);
+}
+.div3:hover {
+    
+    transform: scale(1.1);
+}
+.kolarz {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
+  grid-auto-columns: 1fr;
+  gap: 15px 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "slider slider menuboczne"
+    "blog1 blog2 menuboczne"
+    "blog3 blog4 menuboczne";
+  height: 800px;
+}
+/* Czcionki */
+h1{
+font-weight: 500;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+h2{
+font-weight: 500;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.slider{
+  overflow: hidden;
+  width: 200%;
+  height: 350px;
+  position: relative;
+  bottom: 70px;
+}
+figure{
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  transition: all 1s linear;
+  animation: 40s slidy infinite ;
+}
+.slide{
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.slide img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@keyframes slidy {
+  0%{
+    left:0;
+  }
+  10%{
+    left: -100%;
+  }
+  20%{
+    left: -200%;
+  }
+  30%{
+    left: -300%;
+  }
+  40%{
+    left: -400%;
+  }
+  50%{
+    left: -400%;
+  }
+  60%{
+    left: -300%;
+  }
+  70%{
+    left: -200%;
+  }
+  85%{
+    left: -100%;
+  }
+  100%{
+    left: 0%;
+  }
+
+}
+
+
+.blog1 { grid-area: blog1; }
+
+.blog2 { grid-area: blog2; }
+
+.blog3 { grid-area: blog3; }
+
+.blog4 { grid-area: blog4; }
+
+.menuboczne { grid-area: menuboczne; }
+/* START CSS */
+
+    * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box; 
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+        --clr: #dcdde0;
+    }
+
+    body {
+        background: #dcdde0;
+    }
+    .calemenu{
+        background-color: #dcdde0 ;
+        height:100px;
+        width: 100%;
+        z-index:10;
+        position: fixed;
+        padding-top: 35px;
+		top:-10px
+    }
+    .linki{
+        position: fixed;
+        z-index:25;
+        margin-top:35px;
+		float: left;
+        left: 50px;
+		top: 0px;
+    }
+    .twitter{
+        width: 33.125px ;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 3;
+        background-size: cover;
+        position: relative;
+        float: left;
+    }
+    .facebook{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+        
+    }
+    .instagram{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .youtube{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .facebook ion-icon  {
+  font-size: 32px;
+  margin-top: 15px;
+  color:  #dcdde0;
+}
+.instagram ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color:  #dcdde0;
+}
+.twitter ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color:  #dcdde0;
+}
+.youtube ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color:  #dcdde0;
+}
+.twitter:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.facebook:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.instagram:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.youtube:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+
+    h4{
+    font-weight: 400;
+    font-style: normal;
+    }
+    /* Pasek Nawigacji */
+    .navbarfixed {
+        padding-top: 35px;
+        background: var(--clr);
+        width: 100%;
+        height: 105px;
+        position: fixed;
+        z-index: 10;
+        background: var(--clr);
+    
+    }
+    .navigation {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: rgb(238, 73, 73);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 45px;
+    }
+
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+
+            .navigation ul li {
+                position: relative;
+                list-style: none;
+                width: 70px;
+                height: 70px;
+                z-index: 1;
+            }
+
+                .navigation ul li a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                    .navigation ul li a .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                        color: #dcdde0;
+                    }
+
+                .navigation ul li.active a .icon {
+                    transform: translateY(-32px);
+                }
+
+                .navigation ul li a .text {
+                    position: absolute;
+                    color: #dcdde0;
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .navigation ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: #343534;
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+    }
+
+        .indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 var(--clr);
+        }
+
+        .indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 var(--clr);
+        }
+
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+    /* LOGO */
+    .logo {
+        position: absolute;
+        top: 105px;
+        height: 300px;
+        width: 100%;
+        background: #dcdde0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+        .logo img {
+            height: 230px;
+            width: 600px;
+            justify-content: center;
+            background-position: center;
+            pointer-events: none;
+            background-size: cover;
+            user-select: none;
+        }
+    /* BANER */
+    .baner {
+        position: absolute;
+        top: 405px;
+        width: 100%;
+        height: 532px;
+        background-image: url("Baner.jpg");
+        background-size: cover;
+    }
+    .gradient-baner {
+        width: 100%;
+        height: 532px;
+        background: rgb(0,0,0);
+        background-image: url("https://d-art.ppstatic.pl/kadry/k/r/ff/a0/5d568d5d5ab4e_o_original.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+        
+    }
+    .Guzik_galeria {
+        position: absolute;
+        left: calc(50% - 125px);
+        top: 800px;
+        font-size: 18px;
+        font-family: Verdana;
+        width: 250px;
+        height: 75px;
+        border-width: 1px;
+        color: #fff;
+        font-weight: bold;
+        background: rgb(117, 109, 109);
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        transition-duration: 1s;
+    }
+
+        .Guzik_galeria:hover {
+            transform: scale(1.1);
+            background-color: rgb(66, 65, 65);
+        }
+        /* NAGŁÓWEK */
+       .tekst{
+           width: 100%;
+           height: 250px;
+           background: #dcdde0;
+       }
+       /* PARAIMG */
+       .paraimg {
+        background-image: url("https://pliki.ptwp.pl/pliki/02/45/38/024538_r3_1920.jpg");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       /* SEKCJA TEKSTOWA*/
+       .sektekst {
+        text-shadow: #101010;
+        text-align: center;
+        color: #dcdde0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        width: 100%;
+           background: rgb(221, 88, 88);
+       }
+       /* NEWSLETTER*/
+       .newsletter{
+        background: #dcdde0;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5% 0 5%
+       }
+    .container2 {
+      padding: 20px;
+    }
+    .newsletter input[type=text], input[type=submit] {
+      width: 30%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+    }
+    .newsletter input[type=checkbox] {
+      margin-top: 16px;
+    }
+    .newsletter input[type=submit] {
+      background-color: rgb(160, 117, 117);
+      color: white;
+      border: none;
+    }
+    .newsletter input[type=submit]:hover {
+      opacity: 0.8;
+    }
+    .kolarz {
+        height: 1000px;
+        width: 100%;
+        justify-content: center;
+        padding-top: 55px
+    }
+  
+        .stopka {
+            position: relative;
+            top:3250px;
+            height: 50px;
+        }
+    .stopka ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .stopka li {
+        float: left;
+    }
+
+    .stopka li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition-duration: 1s;
+    }
+
+            /* Change the link color to #111 (black) on hover */
+    .stopka li a:hover {
+        background-color: #111;
+    }
+    .menuboczne{
+    overflow: hidden;
+    margin-left: 5%;
+    }
+    .menuboczne ul {
+        position: relative;
+        left: 320px;
+        top: 10%;
+        transform: skewY(-15deg);
+    }
+
+    .menuboczne ul li {
+        position: relative;
+        list-style: none;
+        width: 200px;
+        background: #3e3f46;
+        padding: 15px;
+        z-index: var(--i);
+        transition: 0.5s;
+    }
+
+    .menuboczne ul li:hover {
+        background: #33a3ee;
+        transform: translateX(50px);
+    }
+
+    .menuboczne ul li::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 40px;
+        height: 100%;
+        background: #2e3133;
+        transform-origin: right;
+        transform: skewY(45deg);
+        transition: 0.5s;
+    }
+
+    .menuboczne ul li:hover::before {
+        background: #2982b9;
+    }
+
+    .menuboczne ul li::after {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        width: 100%;
+        height: 40px;
+        background: #35383e;
+        transform-origin: bottom;
+        transform: skewX(45deg);
+        transition: 0.5s;
+    }
+
+    .menuboczne ul li:hover::after {
+        background: #2982b9;
+    }
+
+    .menuboczne ul li a {
+        text-decoration: none;
+        color: #999;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+    }
+
+    .menuboczne ul li:hover a {
+        color: #fff;
+    }
+
+    .menuboczne ul li:last-child::after {
+        box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+    }
+    .blog1{
+    background-image: url("https://www.powiat-chrzanowski.pl/files/news/dsc09431.jpg");
+    background-size: cover;
+    background-position: center;
+    transition-duration: 1s;
+    }
+    .blog2{
+    background-image: url("https://diecezjasandomierska.pl/wp-content/uploads/2018/04/chrzanow_d.jpg");
+    background-size:cover;
+    background-position: center;
+    transition-duration: 1s;
+    }
+    .blog3{
+    background-image: url("https://d-art.ppstatic.pl/kadry/k/r/1/bf/04/6267c9bb710b1_o_medium.jpg");
+    background-size:cover;
+    transition-duration: 1s;
+    }
+    .blog4{
+    background-image: url("https://www.chrzanow.pl/storage/image/core_files/2022/9/20/de3fea69909ac59bdd5e22c75c6e19e2/jpg/umchrzanow/preview/Zdj.%20Chrzanowa%20R.%20Wall%20(85).jpg");
+    background-size: cover;
+    transition-duration: 1s;
+    }
+
+    .blog1:hover{
+    transform: scale(0.95);
+    }
+    .blog2:hover{
+    transform: scale(0.95);
+    }
+    .blog3:hover{
+    transform: scale(0.95);
+    }
+    .blog4:hover{
+    transform: scale(0.95);
+    }
+    
+</style>
+<head>
+    <link rel="icon" href="https://radcaprawny.kirp.pl/wp-content/uploads/2017/09/coat-of-arms-67863_1280.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Powiat Chrzanowski</title>
+</head>
+
+<body>
+    <div class="linki">
+        <div class="twitter">
+            <a href="https://twitter.com/?lang=pl">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+        <div class="facebook">
+            <a href="https://www.facebook.com">
+            <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+        </a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        </div>
+        <div class="youtube">
+            <a href="https://www.youtube.com">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <div class="container"> 
+<!-- Nawigacja -->
+        <div class="menu">
+            <div class="navbarfixed">
+                <div class="navigation">
+                    <ul>
+                        <li class="list active">
+                            <a href="gallery.html">
+                                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                <span class="text">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="profile.html">
+                                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                <span class="text">Profile</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="gallery.html">
+                                <span class="icon"><ion-icon name="images-outline"></ion-icon></span>
+                                <span class="text"> Gallery</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="about.html">
+                                <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                                <span class="text"> Informacje</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="urg.html">
+                                <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                                <span class="text">Settings</span>
+                            </a>
+                        </li>
+                        <div class="indicator"></div>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://chrzanow.pl/img/logo.png" />
+        </div>
+        <!-- Baner Zdjęcie -->
+        <div class="baner">
+        <div class="gradient-baner"> </div>
+    </div>
+    <a href="gallery.html" class="Guzik_galeria"> <h2>Galeria</h2><ion-icon name="image-outline"></ion-icon></a>
+    <!-- Nagłówek Tekst -->
+    <div class="tekst">
+        <Font-family=''></Font-family>
+         <h1> <u><br> Drodzy Państwo! </h1></u> <h2><br><b> Zarząd Powiatu Chrzanowskiego</b> <br> ogłasza konkurs na stanowisko Dyrektora Powiatowego Centrum Kształcenia Ustawicznego w Chrzanowie <br>
+        ul. Focha 3, 32-500 Chrzanów. </h2>
+    </div>
+    <!-- Zdjęcie z Paralaxą -->
+    <div class="paraimg">
+
+    </div>
+    <!-- hover divy -->
+    <div class="divyhv">
+        <br>
+        <h2><u>Członkowie zarządu powiatu chrzanowskiego: </u></h2> 
+        <div class="container1"> 
+            <div class="div1"><h4> Marek Nowak - Burmistrz</h4></div>
+            <div class="div2"><h4> Jan Barciś - Wicestarosta</h4></div>
+            <div class="div3"> <h4>Andrzej Uryga - Starosta</h4></div>
+          </div>
+    </div>
+    <!-- sekcja tekstowa -->
+    <div class="sektekst">
+        <br>
+        <br>
+        <br>
+    <h1><b>Witamy!</b></h1><br> <h2>Zachęcamy Państwa, do zapisania się do newslettera* w poniżej zamieszczonym formularzu:</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h6> *osoby zapisane do newslettera będą regularnie otrzymywać mailowo oraz telefonicznie informacje i aktualności z naszej strony.</h6>
+    </div>
+    <!-- newsletter -->
+    <div class="newsletter">
+        <form action="action_page.php">
+            <div class="container2">
+            </div>
+          
+            <div class="container2">
+              <input type="text" placeholder="Nr. telefonu" name="Nr. telefonu" required>
+              <input type="text" placeholder="Adres e-mail" name="mail" required>
+              <input type="submit" value="Zapisz się">
+            </div>
+          </form> 
+    </div>
+     <!-- zdjęcia -->
+    <div class="kolarz">
+        <!-- Slider-->
+        <div class="slider">
+            <figure id="fig">
+              <div class="slide">
+                <img src="https://dailyweb.pl/wp-content/uploads/2019/12/chrzanow_logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="https://www.powiat-chrzanowski.pl/banners/mega-news/poznajemymaopolskzachodni-baner-poziom.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="https://www.powiatgrudziadzki.pl/grafika,18138,-.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="https://dnidziedzictwa.pl/wp-content/uploads/2021/04/Fabryka-Lokomotyw-%E2%80%9EFablok%E2%80%9D-w-Chrzanowie-fot.-K.-Schubert-MIK-2021-CC-BY-SA-17-840x450.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="https://www.powiat-chrzanowski.pl/files/fundusze-unijne/zestawienielogoefs_31.jpg" alt="">
+              </div>
+            </figure>
+          
+            </div>
+          
+          
+        <div class="blog1"></div>
+        <div class="blog2"></div>
+        <div class="blog3"></div>
+        <div class="blog4"></div>
+        <div class="menuboczne">
+            <ul>
+                <li style="--i:6;"><a href="glowna.html">Home</a></li>
+                <li style="--i:5;"><a href="urg.html"> O Nas</a></li>
+                <li style="--i:4;"><a href="profile.html"> Rejestracja</a></li>
+                <li style="--i:3;"><a href="gallery.html">Galeria</a></li>
+                <li style="--i:1;"><a href="about.html">Kontakt</a></li>
+            </ul>
+        </div>
+      </div>
+      <!-- stopka -->
+    <div class="stopka">
+        <ul>
+            <li><a href="glowna.html">Home</a></li>
+            <li><a href="profile.html"> Rejestracja</a></li>
+            <li><a href="gallery.html"> Galeria</a></li>
+            <li><a href="urg.html"> O nas</a></li>
+            <li><a href="about.html"> Info</a></li>
+        </ul>
+    </div>
+    </div>
+    <!-- Social Media-->
+    
+   
+
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach(item =>
+            item.addEventListener('click', activeLink))
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

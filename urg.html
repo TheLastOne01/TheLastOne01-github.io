@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        
+		* {
+        margin: 0px;
+        padding: 0px;
+		}
+	
+.calemenu{
+        background-color: #dcdde0 ;
+        height:100px;
+        width: 100%;
+        z-index:10;
+        position: fixed;
+        padding-top: 35px;
+		top:-10px
+    }
+    .linki{
+        position: fixed;
+        z-index:25;
+        margin-top: 25px;
+		float: left;
+		left:50px;
+		top: 0px;
+    }
+    .twitter{
+        width: 33.125px ;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 3;
+        background-size: cover;
+        position: relative;
+        float: left;
+    }
+    .facebook{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+        
+    }
+    .instagram{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .youtube{
+        width: 33.125px;
+        height:70px;
+        background-color: rgb(238, 73, 73);
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .facebook ion-icon  {
+  font-size: 32px;
+  margin-top: 15px;
+  color: var(--clr);
+}
+.instagram ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.youtube ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.facebook:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.instagram:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.youtube:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root { 
+        --clr: #dcdde0;
+    }
+
+    
+    /* Pasek Nawigacji */
+    .navbarfixed {
+        background:  #dcdde0;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+    }
+    .navigation {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: rgb(238, 73, 73);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 45px;
+    }
+
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+
+            .navigation ul li {
+                position: relative;
+                list-style: none;
+                width: 70px;
+                height: 70px;
+                z-index: 1;
+            }
+
+                .navigation ul li a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                    .navigation ul li a .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                        color: var(--clr);
+                    }
+
+                .navigation ul li.active a .icon {
+                    transform: translateY(-32px);
+                }
+
+                .navigation ul li a .text {
+                    position: absolute;
+                    color: var(--clr);
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .navigation ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: #343534;
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+    }
+
+        .indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 var(--clr);
+        }
+
+        .indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 var(--clr);
+        }
+
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+
+body
+{
+	background: #f9f9f9;
+	display: flex;
+	justify-content: center;
+    flex-wrap: wrap;
+	align-items: center;
+}
+.container
+{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 50px;
+	background: #fff;
+	border-left: 50px solid #fff;
+	border-right: 50px solid #fff;
+	box-shadow: 0 50px 75px rgba(0,0,0,0.1);
+}
+.container .top
+{
+	position: relative;
+	display: grid;
+	padding: 40px;
+	padding-bottom: 0;
+	grid-template-columns: 1fr 2fr;
+}
+.container .top .imgBx
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.container .top .imgBx .box
+{
+	position: relative;
+	width: 70%;
+	min-width: 200px;
+	aspect-ratio: 1;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.container .top .imgBx .box img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container .top .profileText
+{
+	position: relative;
+	padding: 40px;
+	display: flex;
+	align-items: center;
+}
+.container .top .profileText h3
+{
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	line-height: 1.2em;
+	font-weight: 600;
+	color: #333;
+	border-left: 4px solid #ffc107;
+	padding-left: 120px;
+}
+.container .top .profileText h3 span
+{
+	position: relative;
+	top: -10px;
+	font-weight: 300;
+	font-size: 0.5em;
+}
+.container .contentBox
+{
+	position: relative;
+	min-height: 500px;
+	display: grid;
+	padding: 0 40px 40px;
+	grid-template-columns: 1fr 2fr;
+}
+.container .contentBox h3
+{
+	border-left: 4px solid #ff8bb3;
+	padding-left: 10px;
+	line-height: 1em;
+	font-weight: 600;
+	color: #333;
+	letter-spacing: 0.1em;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+.container .contentBox ul
+{
+	position: relative;
+	margin: 10px 0;
+}
+.container .contentBox ul li
+{
+	list-style: none;
+	margin: 25px 0;
+	line-height: 1em;
+	color: #333;
+	cursor: pointer;
+	display: flex;
+}
+
+.container .contentBox ul li .ion-icon2
+{
+	font-size: 1.2em;
+	margin-right: 10px;
+	color: #3590d2;
+}
+.container .contentBox ul.education li
+{
+	flex-direction: column;
+	margin: 25px 0;
+}
+h5
+{
+	color: #3590d2;
+}
+h4
+{
+	color: #333;
+	font-weight: 500;
+	margin: 5px 0;
+}
+h6
+{
+	color: #666;
+	font-weight: 300;
+	font-size: 1em;
+}
+.language li
+{
+	flex-direction: column;
+}
+.language li span
+{
+	color: #333;
+	font-size: 16px;
+	font-weight: 500;
+}
+.language .percent
+{
+	position: relative;
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	height: 6px;
+	background: #e3e3e3;
+	display: block;
+	overflow: hidden;
+}
+.language .percent div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #3590d2;
+}
+.container .contentBox ul.interest
+{
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.container .contentBox ul.interest li
+{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 20px 0px;
+}
+.container .contentBox ul.interest li .icon2
+{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	background: #3590d2;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .contentBox ul.interest li .ion-icon2
+{
+	color: #fff !important;
+	margin-right: 0px;
+}
+p
+{
+	font-weight: 300;
+}
+.rightSide
+{
+	padding-left: 40px;
+}
+.about .box
+{
+	display: flex;
+	flex-direction: row;
+	margin: 20px 0;
+}
+.about .box .year_company
+{
+	min-width: 150px;
+	margin-bottom: 10px;
+}
+.about .box .year_company h5
+{
+	color: #333;
+	font-weight: 600;
+}
+.about .box .year_company h5:nth-child(1)
+{
+	color: #3590d2;
+}
+.about .box .text2 h4
+{
+	color: #3590d2;
+	font-size: 16px;
+	margin: 0;
+}
+.about.skills .box
+{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	justify-content: center;
+	align-items: center;
+}
+.about.skills .box h4
+{
+	color: #333;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.about.skills .box .percent
+{
+	position: relative;
+	width: 100%;
+	height: 10px;
+	background: #e3e3e3;
+}
+.about.skills .box .percent div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #3590d2;
+}
+
+.icon {
+    margin-top: 0;
+}
+
+.text {
+    margin-top: 0;
+}
+/* Stopka */
+.stopka {
+            position: absolute;
+			top: 150%;
+            left: 0px;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+        }
+    .stopka ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .stopka li {
+        float: left;
+    }
+
+    .stopka li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition-duration: 1s;
+    }
+
+    .stopka li a:hover {
+        background-color: #111;
+    }
+    </style>
+<head>
+    <link rel="icon" href="https://radcaprawny.kirp.pl/wp-content/uploads/2017/09/coat-of-arms-67863_1280.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> O nas</title>
+<link rel="stylesheet" type="text/css" href="styles/navigation.css">
+<link rel="stylesheet" type="text/css" href="styles/cv.css">
+</head>
+<body>
+	<div class="linki">
+		<div class="twitter">
+			<a href="https://twitter.com/?lang=pl">
+				<ion-icon name="logo-twitter"></ion-icon>
+			</a>
+		</div>
+		<div class="facebook">
+			<a href="https://www.facebook.com">
+			<span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+		</a>
+		</div>
+		<div class="instagram">
+			<a href="https://www.instagram.com">
+			<ion-icon name="logo-instagram"></ion-icon>
+		</a>
+		</div>
+		<div class="youtube">
+			<a href="https://www.youtube.com">
+				<ion-icon name="logo-youtube"></ion-icon>
+			</a>
+		</div>
+	</div>
+	<div class="calemenu">
+		<div class="navbarfixed">
+		<div class="navigation">
+			<ul>
+				<li class="list">
+					<a href="glowna.html">
+						<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+						<span class="text">Home</span>
+					</a>
+				</li>
+	
+				<li class="list">
+					<a href="profile.html">
+						<span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+						<span class="text">Profile</span>
+					</a>
+				</li>
+	
+				<li class="list" >
+					<a href="gallery.html">
+						<span class="icon"><ion-icon name="images-outline"></ion-icon></span>
+						<span class="text"> Gallery</span>
+					</a>
+				</li>
+	
+				<li class="list">
+					<a href="about.html">
+						<span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+						<span class="text"> Cos</span>
+					</a>
+				</li>
+	
+				<li class="list active">
+					<a href="urg.html">
+						<span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+						<span class="text"> About Us</span>
+					</a>
+				</li>
+				<div class="indicator"></div>
+			</ul>
+		</div>
+	</div>
+	</div>
+    
+
+	<div class="container">
+		<div class="top">
+			<div class="imgBx">
+				<div class="box">
+					<img src="https://d-art.ppstatic.pl/kadry/k/r/1/93/45/5bf6b97498134_o_large.jpg">
+				</div>
+			</div>
+			<div class="profileText">
+				<h3>Andrzej<br>Uryga<br><span>Starosta powiatu</span></h3>
+			</div>
+		</div>
+		<div class="contentBox">
+			<div class="leftSide">
+				<h3>Kontakt</h3>
+				<ul>
+					<li>
+						<span class="icon2"><ion-icon class="ion-icon2" name="call-outline"></ion-icon></span>
+						<span class="text2">+48 754 237 533</span>
+					</li>
+					<li>
+						<span class="icon2"><ion-icon class="ion-icon2" name="mail-outline"></ion-icon></span>
+						<span class="text2">andrzej.uryga@wp.pl</span>
+					</li>
+					<li>
+						<span class="icon2"><ion-icon class="ion-icon2" name="earth-outline"></ion-icon></span>
+						<span class="text2">www.powiatchrzanowski.com</span>
+					</li>
+					<li>
+						<span class="icon2"><ion-icon class="ion-icon2" name="location-outline"></ion-icon></span>
+						<span class="text2"> Chrzanów, Polska</span>
+					</li>
+				</ul>
+				<h3>Edukacja</h3>
+				<ul class="education">
+					<li>
+						<h5>1990-1994</h5>
+						<h4> Technik Automatyk</h4>
+						<h6>ZSE Kraków</h6>
+					</li>
+					
+				</ul>
+				<h3>Znajomość języków</h3>
+				<ul class="language">
+					<li>
+						<span class="text">Angielski</span>
+						<span class="percent">
+							<div style="width: 95%"></div>
+						</span>
+					</li>
+					<li>
+						<span class="text">Hiszpański</span>
+						<span class="percent">
+							<div style="width: 80%"></div>
+						</span>
+					</li>
+					<li>
+						<span class="text"> Czeski </span>
+						<span class="percent">
+							<div style="width: 60%"></div>
+						</span>
+					</li>
+				</ul>
+				<h3>Zainteresowania</h3>
+				<ul class="interest">
+					<li><span class="icon2"><ion-icon name="airplane-outline"></ion-icon></span>Podróże</li>
+					<li><span class="icon2"><ion-icon name="barbell-outline"></ion-icon></span> Siłownia</li>
+					<li><span class="icon2"><ion-icon class="ion-icon2" name="book-outline"></ion-icon></span>Czytanie</li>
+					<li><span class="icon2"><ion-icon class="ion-icon2" name="cafe-outline"></ion-icon></span>Gotowanie</li>
+				</ul>
+			</div>
+			<div class="rightSide">
+				<div class="about">
+					<h3>O mnie</h3>
+					<p>Jestem doświadczonym urzędnikiem, który pełnił wiele funkcji publicznych, w tym przez ostatnie 5 lat jako starosta powiatu chrzanowskiego.
+					 W tym czasie udało mi się osiągnąć wiele sukcesów, w tym zwiększenie efektywności administracji powiatowej i poprawę warunków życia mieszkańców.<br><br></p>
+				</div>
+				<div class="about">
+					<h3>Doświadczenie</h3>
+					<div class="box">
+						<div class="year_company">
+							<h5>2018-2023</h5>
+							<h5> Starosta Powiatu</h5>
+						</div>
+					
+				</div>
+				<div class="about skills">
+					<h3>Umiejętności</h3>
+					<div class="box">
+						<h4>Zarządzanie</h4>
+						<span class="percent">
+							<div style="width: 95%"></div>
+						</span>
+					</div>
+					<div class="box">
+						<h4>Wiedza</h4>
+						<span class="percent">
+							<div style="width: 85%"></div>
+						</span>
+					</div>
+					<div class="box">
+						<h4>Kreatywność</h4>
+						<span class="percent">
+							<div style="width: 70%"></div>
+						</span>
+					</div>
+					<div class="box">
+						<h4>Koordynacja projektów</h4>
+						<span class="percent">
+							<div style="width: 90%"></div>
+						</span>
+					</div>
+					<div class="box">
+						<h4>Elastyczność</h4>
+						<span class="percent">
+							<div style="width: 75%"></div>
+						</span>
+					</div>
+					<div class="box">
+						<h4>Znajomość trendów</h4>
+						<span class="percent">
+							<div style="width: 98%"></div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- stopka -->
+    <div class="stopka">
+		<ul>
+            <li><a href="glowna.html">Home</a></li>
+            <li><a href="profile.html"> Rejestracja</a></li>
+            <li><a href="gallery.html"> Galeria</a></li>
+            <li><a href="urg.html"> O nas</a></li>
+            <li><a href="about.html"> Info</a></li>
+        </ul>
+    </div>
+	<script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach(item =>
+            item.addEventListener('click', activeLink))
+    </script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	
+</body>
+</html>
